@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
 
 public class MainBlock : MonoBehaviour
@@ -8,12 +7,9 @@ public class MainBlock : MonoBehaviour
 
     public SphereCollider sphereCollider;
 
-    public async Task AddBlock(GameObject block)
+    public void AddBlock(GameObject block)
     {
-        await Task.Run(() =>
-        {
-            blocksInOrder.Add(block);
-        });
+        blocksInOrder.Add(block);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -28,7 +24,7 @@ public class MainBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     void Update()
