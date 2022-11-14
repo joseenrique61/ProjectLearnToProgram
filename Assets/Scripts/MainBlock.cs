@@ -5,8 +5,6 @@ public class MainBlock : MonoBehaviour
 {
     private List<GameObject> blocksInOrder = new List<GameObject>();
 
-    public SphereCollider sphereCollider;
-
     public void AddBlock(GameObject block)
     {
         blocksInOrder.Add(block);
