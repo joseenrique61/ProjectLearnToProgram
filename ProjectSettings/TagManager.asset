@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Inicio
+  - Process
+  - Fin
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - Blocks
   - 
   - 
   - 

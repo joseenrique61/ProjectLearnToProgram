@@ -9,7 +9,6 @@ public class TapToPlaceParent : MonoBehaviour
     {
         // On each Select gesture, toggle whether the user is in placing mode.
         placing = !placing;
-        
 
         // If the user is in placing mode, display the spatial mapping mesh.
         if (placing)
@@ -47,6 +46,7 @@ public class TapToPlaceParent : MonoBehaviour
                 Quaternion toQuat = Camera.main.transform.localRotation;
                 toQuat.x = 0;
                 toQuat.z = 0;
+                toQuat.y += 90;
                 this.transform.rotation = toQuat;
             }
         }
