@@ -9,14 +9,20 @@ public class FullProcessCommands : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         ContactPoint contact = collision.contacts[0];
-        tmpro.text = contact.otherCollider.name;
-        Destroy(contact.otherCollider.gameObject);
+        if (contact.otherCollider.gameObject.layer == 9)
+        {
+            tmpro.text = contact.otherCollider.name + " Collision";
+            Destroy(contact.otherCollider.gameObject);
+        }
     }
 
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    string contact = other.name;
-    //    tmpro.text = contact;
-    //    Destroy(other.gameObject);
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        string contact = other.name;
+        if (other.gameObject.layer == 9)
+        {
+            tmpro.text = contact + " Trigger";
+            Destroy(other.gameObject);
+        }
+    }
 }
